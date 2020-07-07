@@ -1,6 +1,7 @@
 <?php
 
 use Exact\ExactImport
+use Illuminate\Support\Collection;
 
 class {{ class }} extends ExactImport
 {
@@ -8,7 +9,7 @@ class {{ class }} extends ExactImport
         //
     }
 
-    public function import() {
+    public function import(Collection $items) {
         //
     }
 
