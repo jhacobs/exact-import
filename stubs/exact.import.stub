@@ -1,0 +1,22 @@
+<?php
+
+use Exact\ExactImport
+
+class {{ class }} extends ExactImport
+{
+    public function query() {
+        //
+    }
+
+    public function import() {
+        //
+    }
+
+    public function before() {
+        //
+    }
+
+    public function after() {
+        //
+    }
+}
