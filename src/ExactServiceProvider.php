@@ -2,6 +2,7 @@
 
 namespace Exact;
 
+use Exact\Commands\MakeExactImport;
 use Exact\Queries\AddressesQuery;
 use Exact\Queries\CostCentersQuery;
 use Exact\Queries\CreditorsQuery;
@@ -24,7 +25,13 @@ class ExactServiceProvider extends ServiceProvider
         $this->publishes([
             $this->getConfigFile(),
             config_path('exact.php')
-        ]);
+        ], 'config');
+
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                MakeExactImport::class
+            ]);
+        }
     }
 
     public function register(): void
