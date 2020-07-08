@@ -49,47 +49,47 @@ class ExactServiceProvider extends ServiceProvider
 
     protected function registerQueries(): void
     {
-        $this->app->bind(EmployeesQuery::class, static function ($app) {
+        $this->app->bind(EmployeesQuery::class, function ($app) {
             return $this->buildQuery(EmployeesQuery::class);
         });
 
-        $this->app->bind(SuppliersQuery::class, static function ($app) {
+        $this->app->bind(SuppliersQuery::class, function ($app) {
             return $this->buildQuery(SuppliersQuery::class);
         });
 
-        $this->app->bind(ProjectsQuery::class, static function ($app) {
+        $this->app->bind(ProjectsQuery::class, function ($app) {
             return $this->buildQuery(ProjectsQuery::class);
         });
 
-        $this->app->bind(CostCentersQuery::class, static function ($app) {
+        $this->app->bind(CostCentersQuery::class, function ($app) {
             return $this->buildQuery(CostCentersQuery::class);
         });
 
-        $this->app->bind(DebtorsQuery::class, static function ($app) {
+        $this->app->bind(DebtorsQuery::class, function ($app) {
             return $this->buildQuery(DebtorsQuery::class);
         });
 
-        $this->app->bind(AddressesQuery::class, static function ($app) {
+        $this->app->bind(AddressesQuery::class, function ($app) {
             return $this->buildQuery(AddressesQuery::class);
         });
 
-        $this->app->bind(CreditorsQuery::class, static function ($app) {
+        $this->app->bind(CreditorsQuery::class, function ($app) {
             return $this->buildQuery(CreditorsQuery::class);
         });
 
-        $this->app->bind(ItemAssortmentQuery::class, static function ($app) {
+        $this->app->bind(ItemAssortmentQuery::class, function ($app) {
             return $this->buildQuery(ItemAssortmentQuery::class);
         });
 
-        $this->app->bind(ItemClassesQuery::class, static function ($app) {
+        $this->app->bind(ItemClassesQuery::class, function ($app) {
             return $this->buildQuery(ItemClassesQuery::class);
         });
 
-        $this->app->bind(ItemPricesQuery::class, static function ($app) {
+        $this->app->bind(ItemPricesQuery::class, function ($app) {
             return $this->buildQuery(ItemPricesQuery::class);
         });
 
-        $this->app->bind(ItemsQuery::class, static function ($app) {
+        $this->app->bind(ItemsQuery::class, function ($app) {
             return $this->buildQuery(ItemsQuery::class);
         });
     }
