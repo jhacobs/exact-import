@@ -23,8 +23,7 @@ class ExactServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->publishes([
-            $this->getConfigFile(),
-            config_path('exact.php')
+            $this->getConfigFile() => config_path('exact.php')
         ], 'config');
 
         if ($this->app->runningInConsole()) {
