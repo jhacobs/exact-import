@@ -1,5 +1,9 @@
 # Exact Import
 
+## Todo
+
+- Add tests
+
 ## Installation
 
 `composer require jhacobs/exact-import`
@@ -374,7 +378,3 @@ Make an Exact import class by running the command
 ```
 php artisan make:exact-import ExampleImport --path=App/Exact
 ```
-
-## Todo
-
-- Add tests
