@@ -20,7 +20,7 @@ abstract class Query extends Builder
         return $this;
     }
 
-    public function get($columns = ['*']): Collection
+    public function fetch($columns = ['*']): Collection
     {
         return $this->from($this->table())
             ->get($columns);
