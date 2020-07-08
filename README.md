@@ -72,7 +72,7 @@ Exact::queue(ExampleImport);
 ```
 Exact::employees()
     ->fields('name', 'email')
-    ->get();
+    ->fetch;
 ```
 
 Active contract
@@ -81,7 +81,7 @@ Active contract
 Exact::employees()
     ->fields('name', 'email')
     ->activeContract()
-    ->get();
+    ->fetch;
 ```
 
 Contract ended
@@ -90,7 +90,7 @@ Contract ended
 Exact::employees()
     ->fields('name', 'email')
     ->contractEnded()
-    ->get();
+    ->fetch;
 ```
 
 Only employees that have an email
@@ -99,7 +99,7 @@ Only employees that have an email
 Exact::employees()
     ->fields('name', 'email')
     ->hasEmail()
-    ->get();
+    ->fetch;
 ```
 
 Only employees that have no email
@@ -108,7 +108,7 @@ Only employees that have no email
 Exact::employees()
     ->fields('name', 'email')
     ->hasNoEmail()
-    ->get();
+    ->fetch;
 ```
 
 Only employees that have a name
@@ -117,7 +117,7 @@ Only employees that have a name
 Exact::employees()
     ->fields('name', 'email')
     ->hasName()
-    ->get();
+    ->fetch;
 ```
 
 Only employees that have no name
@@ -126,7 +126,7 @@ Only employees that have no name
 Exact::employees()
     ->fields('name', 'email')
     ->hasNoName()
-    ->get();
+    ->fetch;
 ```
 
 Only employees that are representative
@@ -135,7 +135,7 @@ Only employees that are representative
 Exact::employees()
     ->fields('name', 'email')
     ->isRepresentative()
-    ->get();
+    ->fetch;
 ```
 
 ### Addresses
@@ -143,7 +143,7 @@ Exact::employees()
 ```
 Exact::addresses()
     ->fields()
-    ->get();
+    ->fetch;
 ```
 
 ### Cost Centers
@@ -151,7 +151,7 @@ Exact::addresses()
 ```
 Exact::costCenters()
     ->fields()
-    ->get();
+    ->fetch;
 ```
 
 ### Creditors
@@ -159,7 +159,7 @@ Exact::costCenters()
 ```
 Exact::creditors()
     ->fields()
-    ->get();
+    ->fetch;
 ```
 
 ### Debtors
@@ -167,7 +167,7 @@ Exact::creditors()
 ```
 Exact::debtors()
     ->fields()
-    ->get();
+    ->fetch;
 ```
 
 ### Item Assortment
@@ -175,7 +175,7 @@ Exact::debtors()
 ```
 Exact::itemAssortment()
     ->fields()
-    ->get();
+    ->fetch;
 ```
 
 ### Item Classes
@@ -183,7 +183,7 @@ Exact::itemAssortment()
 ```
 Exact::itemClasses()
     ->fields()
-    ->get();
+    ->fetch;
 ```
 
 Where class id equals
@@ -192,7 +192,7 @@ Where class id equals
 Exact::itemClasses()
     ->fields()
     ->whereClassId(3)
-    ->get();
+    ->fetch;
 ```
 
 ### Item Prices
@@ -200,7 +200,7 @@ Exact::itemClasses()
 ```
 Exact::itemPrices()
     ->fields()
-    ->get();
+    ->fetch;
 ```
 
 ### Items
@@ -208,7 +208,7 @@ Exact::itemPrices()
 ```
 Exact::items()
     ->fields()
-    ->get();
+    ->fetch;
 ```
 
 Load Class_01
@@ -217,7 +217,7 @@ Load Class_01
 Exact::items()
     ->fields()
     ->withClass01()
-    ->get();
+    ->fetch;
 ```
 
 Load Class_02
@@ -226,7 +226,7 @@ Load Class_02
 Exact::items()
     ->fields()
     ->withClass02()
-    ->get();
+    ->fetch;
 ```
 
 Load Class_03
@@ -235,7 +235,7 @@ Load Class_03
 Exact::items()
     ->fields()
     ->withClass03()
-    ->get();
+    ->fetch;
 ```
 
 Load Class_04
@@ -244,7 +244,7 @@ Load Class_04
 Exact::items()
     ->fields()
     ->withClass04()
-    ->get();
+    ->fetch;
 ```
 
 Load Class_05
@@ -253,7 +253,7 @@ Load Class_05
 Exact::items()
     ->fields()
     ->withClass05()
-    ->get();
+    ->fetch;
 ```
 
 Load Class_06
@@ -262,7 +262,7 @@ Load Class_06
 Exact::items()
     ->fields()
     ->withClass06()
-    ->get();
+    ->fetch;
 ```
 
 Load Class_07
@@ -271,7 +271,7 @@ Load Class_07
 Exact::items()
     ->fields()
     ->withClass07()
-    ->get();
+    ->fetch;
 ```
 
 Load Class_08
@@ -280,7 +280,7 @@ Load Class_08
 Exact::items()
     ->fields()
     ->withClass08()
-    ->get();
+    ->fetch;
 ```
 
 Load Class_09
@@ -289,7 +289,7 @@ Load Class_09
 Exact::items()
     ->fields()
     ->withClass09()
-    ->get();
+    ->fetch;
 ```
 
 Load Class_10
@@ -298,7 +298,7 @@ Load Class_10
 Exact::items()
     ->fields()
     ->withClass10()
-    ->get();
+    ->fetch;
 ```
 
 Load assortment
@@ -307,7 +307,7 @@ Load assortment
 Exact::items()
     ->fields()
     ->withAssortment()
-    ->get();
+    ->fetch;
 ```
 
 Load prices
@@ -316,7 +316,7 @@ Load prices
 Exact::items()
     ->fields()
     ->withPrices()
-    ->get();
+    ->fetch;
 ```
 
 Load Sales Price
@@ -325,7 +325,7 @@ Load Sales Price
 Exact::items()
     ->fields()
     ->withSalesPrice()
-    ->get();
+    ->fetch;
 ```
 
 Load Sales Price Total
@@ -334,7 +334,7 @@ Load Sales Price Total
 Exact::items()
     ->fields()
     ->withSalesPriceTotal()
-    ->get();
+    ->fetch;
 ```
 
 ### Projects
@@ -342,7 +342,7 @@ Exact::items()
 ```
 Exact::projects()
     ->fields()
-    ->get();
+    ->fetch;
 ```
 
 Load responsible employee
@@ -351,7 +351,7 @@ Load responsible employee
 Exact::projects()
     ->fields()
     ->withresponsibleEmployee()
-    ->get();
+    ->fetch;
 ```
 
 Load responsible employee field
@@ -360,7 +360,7 @@ Load responsible employee field
 Exact::projects()
     ->fields()
     ->withResponsibleEmployeeField('email')
-    ->get();
+    ->fetch;
 ```
 
 ### Suppliers
@@ -368,7 +368,7 @@ Exact::projects()
 ```
 Exact::suppliers()
     ->fields()
-    ->get();
+    ->fetch;
 ```
 
 ## Make Exact Import
