@@ -104,7 +104,7 @@ class ExactServiceProvider extends ServiceProvider
         /** @var DatabaseManager $db */
         $db = $this->app->make('db');
         /** @var Connection $connection */
-        $connection = $db->connection(config('exact.connection_name'));
+        $connection = $db->connection(config('exact.database_connection'));
 
         return new $class($connection, $connection->getQueryGrammar(), $connection->getPostProcessor());
     }
