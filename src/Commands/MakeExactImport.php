@@ -2,58 +2,27 @@
 
 namespace Exact\Commands;
 
-use Illuminate\Console\Command;
-use Illuminate\Filesystem\Filesystem;
-use Illuminate\Support\Str;
+use Illuminate\Console\GeneratorCommand;
 
-class MakeExactImport extends Command
+class MakeExactImport extends GeneratorCommand
 {
     protected $signature = 'make:exact-import {name} {--path=}';
 
     protected $description = 'Make a exact import';
 
-    protected $files;
-
-    public function __construct(Filesystem $files)
+    protected function alreadyExists($rawName): bool
     {
-        $this->files = $files;
-
-        parent::__construct();
-    }
-
-    public function handle()
-    {
-        $name = $this->argument('name');
-        $path = $this->option('path');
-
-        $stub = $this->getStub();
-
-        $this->files->put(
-            $path = $this->getPath($name, $path),
-            $this->populateStub($name, $stub)
-        );
-
-        return $path;
+        return class_exists($rawName) ||
+            $this->files->exists($this->getPath($this->qualifyClass($rawName)));
     }
 
     protected function getStub(): string
     {
-         return $this->files->get(__DIR__.'../../stubs/exact.import.stub');
+        return __DIR__.'/../../stubs/exact.import.stub';
     }
 
-    protected function getPath($name, $path): string
+    protected function getDefaultNamespace($rootNamespace): string
     {
-        return $path.'/'.date('Y_m_d_His').'_'.$name.'.php';
-    }
-
-    protected function populateStub($name, $stub)
-    {
-        $stub = str_replace(
-            ['{{ class }}', '{{class}}'],
-            Str::studly($name),
-            $stub
-        );
-
-        return $stub;
+        return $rootNamespace.'\Exact';
     }
 }
