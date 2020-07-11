@@ -1,23 +1,29 @@
 <?php
 
-use Exact\ExactImport
+namespace DummyNamespace;
+
+use Exact\ExactImport;
 use Illuminate\Support\Collection;
 
-class {{ class }} extends ExactImport
+class DummyClass extends ExactImport
 {
-    public function query() {
+    public function query()
+    {
         //
     }
 
-    public function import(Collection $items) {
+    public function import(Collection $items)
+    {
         //
     }
 
-    public function before(): void {
+    public function before(): void
+    {
         //
     }
 
-    public function after(): void {
+    public function after(): void
+    {
         //
     }
 }
