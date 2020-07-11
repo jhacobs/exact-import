@@ -3,6 +3,7 @@
 ## Todo
 
 - Add tests
+- Better error messages
 
 ## Installation
 
