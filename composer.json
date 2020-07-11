@@ -1,6 +1,7 @@
 {
     "name": "jhacobs/exact-import",
     "license": "MIT",
+    "version": "1.0.0-alpha.1",
     "authors": [
         {
             "name": "Jacob Aretz",
